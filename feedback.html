@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>feedback</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .card{
+            background-color: white;
+            text-align: center;
+        }
+        h2{
+            margin-top: 30px;
+            color:blue;
+            font-weight: 900;
+        }
+        #emoji{
+            font-size: 100px;
+        }
+        #input{
+            background-color: black;
+            color: red;
+            font-weight: 900;
+            text-align: center;
+            border-radius: 30px;
+            width: 150px;
+            padding-bottom: 8px;
+        }
+        .star{
+            display: grid;
+            grid-auto-flow: column;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        #star1, #star2, #star3 ,#star4 ,#star5 {
+            font-size: 80px;
+            color: black;
+            border-style: none;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-5 m-auto">
+                <div class="card">
+                    <h2>CUSTOMER   FEEDBACK</h2>
+                    <div class="emoji"><p id="emoji">👇</p></div>
+                    <div class="input"><input type="text" id="input" value="Rating"></div>
+                    <div class="star">
+                        <button id="star1" onclick="star1()">★ </button>
+                        <button id="star2" onclick="star2()">★ </button>
+                        <button id="star3" onclick="star3()">★ </button>
+                        <button id="star4" onclick="star4()">★ </button>
+                        <button id="star5" onclick="star5()">★ </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        let emoji=document.querySelector("#emoji");
+        let feedback=document.querySelector("#input");
+
+        function star1(){
+            emoji.innerHTML="😭"
+            feedback.value="Very poor";
+            document.querySelector("#star1").style.color="yellow";
+            document.querySelector("#star2").style.color="black";
+            document.querySelector("#star3").style.color="black";
+            document.querySelector("#star4").style.color="black";
+            document.querySelector("#star5").style.color="black";
+        }
+        function star2(){
+            emoji.innerHTML="😢"
+            feedback.value="Poor";
+            document.querySelector("#star1").style.color="yellow";
+            document.querySelector("#star2").style.color="yellow";
+            document.querySelector("#star3").style.color="black";
+            document.querySelector("#star4").style.color="black";
+            document.querySelector("#star5").style.color="black";
+        }
+        function star3(){
+            emoji.innerHTML="☹️"
+            feedback.value="Average";
+            document.querySelector("#star1").style.color="yellow";
+            document.querySelector("#star2").style.color="yellow";
+            document.querySelector("#star3").style.color="yellow";
+            document.querySelector("#star4").style.color="black";
+            document.querySelector("#star5").style.color="black";
+        }
+        function star4(){
+            emoji.innerHTML="😀"
+            feedback.value="Good";
+            document.querySelector("#star1").style.color="yellow";
+            document.querySelector("#star2").style.color="yellow";
+            document.querySelector("#star3").style.color="yellow";
+            document.querySelector("#star4").style.color="yellow";
+            document.querySelector("#star5").style.color="black";
+        }
+        function star5(){
+            emoji.innerHTML="🥰"
+            feedback.value="Excellent";
+            document.querySelector("#star1").style.color="yellow";
+            document.querySelector("#star2").style.color="yellow";
+            document.querySelector("#star3").style.color="yellow";
+            document.querySelector("#star4").style.color="yellow";
+            document.querySelector("#star5").style.color="yellow";
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
